@@ -1,0 +1,43 @@
+{
+    "name": "hypnodev/larapal",
+    "description": "An easy way to integrate Paypal into Laravel",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Cristian Cosenza",
+            "email": "me@cristiancosenza.com"
+        }
+    ],
+    "homepage": "https://github.com/hypnodev/larapal",
+    "keywords": ["Laravel", "Larapal"],
+    "require": {
+        "illuminate/support": "~5|~6|~7",
+        "paypal/paypal-checkout-sdk": "^1.0.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0",
+        "mockery/mockery": "^1.1",
+        "orchestra/testbench": "~3|~4",
+        "sempro/phpunit-pretty-print": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "hypnodev\\Larapal\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "hypnodev\\Larapal\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "hypnodev\\Larapal\\LarapalServiceProvider"
+            ],
+            "aliases": {
+                "Larapal": "hypnodev\\Larapal\\Facades\\Larapal"
+            }
+        }
+    }
+}

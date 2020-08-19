@@ -1,9 +1,12 @@
-# Larapal
+<p align="center">
+  <img width="256" height="256" src="https://raw.githubusercontent.com/hypnodev/larapal/master/assets/logo.png">
+</p>
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Total Downloads][ico-downloads]][link-downloads]
 
 A modern, easy and fluent way to allow your clients to pay with PayPal.
+![banner](./assets/banner.png)
 
 ## Installation
 

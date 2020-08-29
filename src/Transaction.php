@@ -32,6 +32,11 @@ class Transaction
      */
     private User $user;
 
+    /**
+     * Transaction constructor.
+     *
+     * @param array $config Transaction config
+     */
     public function __construct(array $config = [])
     {
         $this->config = $config;

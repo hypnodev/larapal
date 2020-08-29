@@ -3,8 +3,12 @@
 namespace hypnodev\Larapal\Traits;
 
 use hypnodev\Larapal\{
-    Subscription,
-    Transaction
+    Transaction,
+    Subscription
+};
+use hypnodev\Larapal\Models\{
+    PaypalSubscription,
+    PaypalTransaction
 };
 
 trait BillableWithPaypal
@@ -59,7 +63,7 @@ trait BillableWithPaypal
      */
     public function paypalSubscriptions()
     {
-        return $this->hasMany(Subscription::class);
+        return $this->hasMany(PaypalSubscription::class);
     }
 
     /**
@@ -69,7 +73,7 @@ trait BillableWithPaypal
      */
     public function paypalTransactions()
     {
-        return $this->hasMany(Transaction::class);
+        return $this->hasMany(PaypalTransaction::class);
     }
 
     /**

@@ -2,7 +2,6 @@
 
 namespace hypnodev\Larapal;
 
-use App\User;
 use hypnodev\Larapal\Models\PaypalSubscription;
 use hypnodev\Larapal\Exceptions\InvalidNameException;
 use hypnodev\Larapal\PayPal\Subscriptions\SubscriptionsCreateRequest;
@@ -23,10 +22,8 @@ class Subscription
 
     /**
      * Subscriber
-     *
-     * @var \App\User
      */
-    private User $user;
+    private $user;
 
     /**
      * Subscription constructor.
@@ -56,11 +53,11 @@ class Subscription
     /**
      * Set subscriber user
      *
-     * @param User $user Subscriber user
+     * @param $user Subscriber user
      * @return $this
      * @throws \hypnodev\Larapal\Exceptions\InvalidNameException
      */
-    public function setUser(User $user): Subscription
+    public function setUser($user): Subscription
     {
         $this->user = $user;
         $name = $this->resolveName();
